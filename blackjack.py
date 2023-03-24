@@ -115,7 +115,7 @@ class Game:
         self.wins = 0
         self.losses = 0
 
-        self.path = r"\bridge/Cards/{}.png"
+        self.path = r"/Cards/{}.png"
 
         self.count = Count()
 
@@ -131,7 +131,7 @@ class Game:
         self.tableFrame = Frame(self.root, bg="green")
         self.tableFrame.pack(side=RIGHT, pady=20, padx=20) 
 
-        tableImage = Image.open(os.getcwd() + r"/bridge/Basic Strategy/blackjack-basic-strategy-card.png")
+        tableImage = Image.open(os.getcwd() + r"/Basic Strategy/blackjack-basic-strategy-card.png")
         sizedtable = tableImage.resize((450,600))
         tableFinalImage = ImageTk.PhotoImage(sizedtable)
 
@@ -312,7 +312,7 @@ class Game:
         global finished
         if not finished:
             pwd = os.getcwd()
-            self.path = r"\bridge/Cards/{}.png"
+            self.path = r"/Cards/{}.png"
 
             global dealerCardImage2, dealerCardImage3, dealerCardImage4, dealerCardImage5, dealerCardImage6
 
@@ -387,7 +387,7 @@ class Game:
         global finished
         if not finished:
             pwd = os.getcwd()
-            self.path = r"\bridge/Cards/{}.png"
+            self.path = r"/Cards/{}.png"
 
             doubleBlackJack = False
 
@@ -492,7 +492,7 @@ class Game:
                     cardImage2 = resize_card(pwd + self.path.format(self.player.cards[x]))
                     self.player_label2.config(image=cardImage2)
 
-                    cardBack = resize_card(pwd + r"/bridge/Cards/CardBack.png")
+                    cardBack = resize_card(pwd + r"/Cards/CardBack.png")
                     self.dealer_label2.config(image=cardBack)
 
         self.cardsLeft = len(self.deck.cards)
